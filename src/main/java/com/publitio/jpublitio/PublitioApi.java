@@ -1,13 +1,11 @@
 package com.publitio.jpublitio;
 
 import java.io.Closeable;
-import java.io.DataInput;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
 import java.util.Map;
 import java.util.Random;
-import java.util.ArrayList;
 
 import javax.json.Json;
 import javax.json.JsonObject;
@@ -15,15 +13,12 @@ import javax.json.stream.JsonParsingException;
 
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import org.apache.http.message.BasicNameValuePair;
 import org.apache.commons.codec.digest.DigestUtils;
-import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
-import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.entity.mime.content.InputStreamBody;
@@ -71,7 +66,7 @@ public class PublitioApi implements Closeable
      * Make a GET API call.
      * 
      * @param path Target endpoint path, such as "/files/list" or "files/show/<file_id>".
-     * @param parameters Query parameters to send with the request.
+     * @param parameters Optional query parameters to send with the request.
      * @return Parsed JSON response.
      */
     public JsonObject get(String path, Map<String, String> parameters) throws Exception
@@ -97,7 +92,7 @@ public class PublitioApi implements Closeable
      * Make a PUT API call.
      * 
      * @param path Target endpoint path, such as "/files/update/<file_id>".
-     * @param parameters Query parameters to send with the request.
+     * @param parameters Optional query parameters to send with the request.
      * @return Parsed JSON response.
      */
     public JsonObject put(String path, Map<String, String> parameters) throws Exception
@@ -123,7 +118,7 @@ public class PublitioApi implements Closeable
      * Make a DELETE API call.
      * 
      * @param path Target endpoint path, such as "/files/delete/<file_id>".
-     * @param parameters Query parameters to send with the request.
+     * @param parameters Optional query parameters to send with the request.
      * @return Parsed JSON response.
      */
     public JsonObject delete(String path, Map<String, String> parameters) throws Exception
@@ -150,7 +145,7 @@ public class PublitioApi implements Closeable
      * "/files/create" and "watermarks/create".
      * 
      * @param path The target endpoint path.
-     * @param parameters Query parameters to send with the request.
+     * @param parameters Optional query parameters to send with the request.
      * @return Parsed JSON response.
      */
     public JsonObject uploadFile(String path, InputStream input, Map<String, String> parameters) throws Exception

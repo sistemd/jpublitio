@@ -1,0 +1,30 @@
+\hypertarget{classcom_1_1publitio_1_1jpublitio_1_1JsonException}{}\section{com.\+publitio.\+jpublitio.\+Json\+Exception Class Reference}
+\label{classcom_1_1publitio_1_1jpublitio_1_1JsonException}\index{com.\+publitio.\+jpublitio.\+Json\+Exception@{com.\+publitio.\+jpublitio.\+Json\+Exception}}
+
+
+Inheritance diagram for com.\+publitio.\+jpublitio.\+Json\+Exception\+:
+% FIG 0
+
+
+Collaboration diagram for com.\+publitio.\+jpublitio.\+Json\+Exception\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcom_1_1publitio_1_1jpublitio_1_1JsonException_a6c69769d312221275e1ad0b226f21df8}\label{classcom_1_1publitio_1_1jpublitio_1_1JsonException_a6c69769d312221275e1ad0b226f21df8}} 
+{\bfseries Json\+Exception} (String message)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcom_1_1publitio_1_1jpublitio_1_1JsonException_a2d51aa1d176f2ebc481592f373032f6b}\label{classcom_1_1publitio_1_1jpublitio_1_1JsonException_a2d51aa1d176f2ebc481592f373032f6b}} 
+static final long {\bfseries serial\+Version\+U\+ID} = 53442
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This exception is thrown when parsing the response J\+S\+ON fails. It might mean either that your endpoint path is wrong, or there was an internal server error. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/publitio/jpublitio/Json\+Exception.\+java\end{DoxyCompactItemize}

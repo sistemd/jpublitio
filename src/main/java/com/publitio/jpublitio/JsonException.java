@@ -1,6 +1,11 @@
 package com.publitio.jpublitio;
 
-class JsonException extends Exception
+/**
+ * This exception is thrown when parsing the response JSON fails.
+ * It might mean either that your endpoint path is wrong, or there
+ * was an internal server error.
+ */
+public class JsonException extends Exception
 {
     public static final long serialVersionUID = 53442;
 
